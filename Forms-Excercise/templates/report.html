@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class= "jumbotron">
+
+<p>Let's see how you performed</p>
+
+{% if report %}
+    <p>Your username passed all checks!</p>
+{% else %}
+<ul>
+    {% if not lower %}
+        <li>You didnt user a lowercase letter</li>
+    {% endif %}
+    {% if not upper %}
+        <li>You didn't use a uppercase letter</li>
+    {% endif %}
+    {% if not num_end %}
+        <li>You didnot user a number at the end</li>
+    {% endif %}
+</ul>
+{% endif %}
+
+</div>
+
+{% endblock %}
+
+
+    <!-- <ul id='navigation'>
+        {% for item in navigation %}
+        <li>{{reason1}}</li>
+        <li2>{{reason2}}</li2>
+        <li3>{{reason3}}</li3>
+        {% endfor %}
+    </ul>
