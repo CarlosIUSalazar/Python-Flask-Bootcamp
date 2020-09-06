@@ -1,16 +1,16 @@
 {# INDEX.HTML #}
+        <!-- The default for breed we set to False so the first thing users see is what is in the else statement. -->
 <p>
     {% if breed %}  
-        <!-- The default for breed we set to False so the first thing users see is what is in the else statement. -->
         The breed you entered is {{breed}}
         Update it in the form below:
-    {% else % }
+    {% else %}
         Please enter your breed:
     {% endif %}
 </p>
 
 <form method="POST">
-    We are passing a form object from basic.py route index(). we said form = InfoForm(). And InfoForm is a class with 2 attributes (breed and submit)
+    <!-- We are passing a form object from basic.py route index(). we said form = InfoForm(). And InfoForm is a class with 2 attributes (breed and submit) -->
     {{ form.hidden_tag() }}
     {{ form.breed.label }}  {{ form.breed() }}
     {{ form.submit() }}
