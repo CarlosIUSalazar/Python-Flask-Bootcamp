@@ -1,4 +1,5 @@
 {
+    "python.linting.pylintArgs": ["--load-plugins", "pylint_flask"],
     "python.linting.pylintEnabled": true,
     "python.linting.enabled": true,
     "files.associations": {"*.html": "jinja-html"}
